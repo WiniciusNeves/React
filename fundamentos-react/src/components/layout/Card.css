@@ -1,0 +1,28 @@
+.Card {
+    background-color: orange;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    height: 20rem;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.Card p{
+    padding: 10px;
+    width: 95%;
+    color: black;
+    background-color: rgb(255, 255, 255);   
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}

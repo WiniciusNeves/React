@@ -10,7 +10,7 @@ import './styles.css';
 export default props => {
 
     return (
-        <>
+        <div className="Cards">
 
             <Card title="#02-Card" Coutent="Conteudo">
 
@@ -20,7 +20,7 @@ export default props => {
 
                 <PrimerioComponente />
             </Card>
-        </>
+        </div>
 
 
     )

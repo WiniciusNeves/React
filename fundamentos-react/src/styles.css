@@ -3,3 +3,8 @@ body {
     color: white;
 }
 
+.App .Cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

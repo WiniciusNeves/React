@@ -6,7 +6,12 @@ import Familha from "./components/model/familha";
 import Familha2 from "./components/model/familha2";
 import ListaAlunos from "./components/repit/listaAlunos";
 import Mercado from "./components/repit/mercado";
-import ParOuInpar from "./components/condicinal/ParOuInpar";
+import ParOuInpar from "./components/condicional/ParOuInpar";
+import UserInfo from "./components/condicional/UserInfo";
+import Pai from "./components/heraquia/pai";
+import Input from "./components/form/input";
+import Contador from "./components/contador/contador";
+
 
 import './styles.css';
 
@@ -18,6 +23,28 @@ export default props => {
         <div className="Cards">
 
 
+            <Card title="#10-Contador" Coutent="Conteudo" style={{ backgroundColor: '#FF8474' }}>
+
+                <Contador />
+
+            </Card>
+
+            <Card title="#09-Input" Coutent="Conteudo" style={{ backgroundColor: '#FF69B4' }}>
+
+                <Input />
+
+            </Card>
+            <Card title="#08-heraquia" Coutent="Conteudo" style={{ backgroundColor: '#8B4513' }}>
+
+                <Pai sobrenome="Silva"></Pai>
+
+            </Card>
+
+            <Card title="#07-User Info" Coutent="Conteudo" style={{ backgroundColor: '#C1CDCD' }}>
+
+                <UserInfo user={{ name: 'João', email: 'j@j.com' }}></UserInfo>
+
+            </Card>
             <Card title="#06-Par OU Impar" Coutent="Conteudo" style={{ backgroundColor: '#00FF00' }}>
 
                 <ParOuInpar number={15}></ParOuInpar>

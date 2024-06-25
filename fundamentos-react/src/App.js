@@ -11,6 +11,7 @@ import UserInfo from "./components/condicional/UserInfo";
 import Pai from "./components/heraquia/pai";
 import Input from "./components/form/input";
 import Contador from "./components/contador/contador";
+import Mega from "./components/mega/mega";
 
 
 import './styles.css';
@@ -23,6 +24,16 @@ export default props => {
         <div className="Cards">
 
 
+            <Card title="#11-Mega" Coutent="Conteudo" style={{ backgroundColor: '#B0E0E6' }}>
+
+                <h1>
+                   Mega-Sena <Mega qtde={6} />
+                </h1>
+                <h1>
+                   Quina <Mega qtde={5} />
+                </h1>
+
+            </Card>
             <Card title="#10-Contador" Coutent="Conteudo" style={{ backgroundColor: '#FF8474' }}>
 
                 <Contador />

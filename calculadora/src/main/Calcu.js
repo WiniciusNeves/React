@@ -29,7 +29,7 @@ export default class Calc extends Component {
 
             const valuesCopy = [...values];
             try {
-                valuesCopy[0] = eval(`${values[0]} ${currentOperation} ${values[1]}`);
+                valuesCopy[0] = this.calculateResult(values[0], values[1], currentOperation);
             } catch (e) {
                 valuesCopy[0] = values[0];
             }
@@ -43,6 +43,18 @@ export default class Calc extends Component {
                 values: valuesCopy,
             });
         }
+    }
+
+    calculateResult = (value1, value2, operation) => {
+        let result = 0;
+        switch(operation) {
+            case '+': result = value1 + value2; break;
+            case '-': result = value1 - value2; break;
+            case '*': result = value1 * value2; break;
+            case '/': result = value1 / value2; break;
+            default: break;
+        }
+        return parseFloat(result.toFixed(10));
     }
 
     addDigit = (n) => {

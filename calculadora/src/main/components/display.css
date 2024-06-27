@@ -1,0 +1,12 @@
+.display {
+    grid-column: 1 / -1;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    background-color: #0004;
+    word-break: break-all;
+    height: 40px;
+    overflow: hidden;
+}

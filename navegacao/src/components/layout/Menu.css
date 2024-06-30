@@ -1,0 +1,39 @@
+.Menu {
+    display: flex;
+    background-color: #580416;
+    flex-basis: 250px;
+    color: white;
+
+}
+
+.Menu nav {
+    flex: 1;
+}
+
+.Menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+
+}
+
+.Menu li {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin-bottom: 20px;
+
+}
+
+.Menu li a {
+    color: aquamarine;
+    text-decoration: none;
+    font-size: 1.5rem;
+    flex: 1;
+    padding: 10px;
+}
+
+.Menu li a:hover {
+    background-color: #0004;
+}

@@ -1,0 +1,37 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    color: #fff;
+    padding: 20px 40px;
+    font-size: 30px;
+}
+
+.header a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    border: 2px solid #af072b;
+
+    &:hover {
+        background-color: #fff;
+        color: #af072b;
+        border: 2px solid #fff;
+    }
+
+}
+
+
+.conteudo {
+    padding: 20px;
+
+}

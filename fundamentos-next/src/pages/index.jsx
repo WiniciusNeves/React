@@ -6,6 +6,9 @@ export default function Home() {
             <Nav destino="/" texto="Home"/>
             <Nav destino="/test" texto="Teste"/>
             <Nav destino="/styles" texto="Estilo"/>
+            <Nav destino="/auth/login" texto="Autenticação"/>
+            <Nav destino="/estado" texto="Estado"/>
+            <Nav destino="/int" texto="Int"/>
         </div>
     );
 }

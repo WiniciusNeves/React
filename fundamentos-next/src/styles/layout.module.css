@@ -12,6 +12,9 @@
     color: #fff;
     padding: 20px 40px;
     font-size: 30px;
+    background-color: #af072b;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .header a {
@@ -20,12 +23,10 @@
     padding: 10px 20px;
     border-radius: 5px;
     transition: all 0.3s ease;
-    border: 2px solid #af072b;
 
     &:hover {
         background-color: #fff;
         color: #af072b;
-        border: 2px solid #fff;
     }
 
 }

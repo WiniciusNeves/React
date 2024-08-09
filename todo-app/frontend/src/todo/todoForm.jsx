@@ -1,33 +1,60 @@
-import React from "react";
-import { FaPlus } from "react-icons/fa";
-import { FaSearch } from "react-icons/fa";
-import IconButton from "../template/iconButton";
+import React, { Component } from "react";
+import { FaPlus, FaSearch } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
-
+import IconButton from "../template/iconButton";
 import Grid from "../template/grid";
-export default (props) => {
 
-    const keyHandler = (e) => {
+import { bindActionCreators } from "redux";
+import { changeDescription, search, add, todoClear } from "../todo/todoAction";
+import { connect } from "react-redux";
+
+class TodoForm extends Component {
+    constructor(props) {
+        super(props);
+        this.keyHandler = this.keyHandler.bind(this);
+    }
+
+    componentWillMount() {
+        this.props.search(this.props.description); // Busca inicial com filtro de descrição
+    }
+
+    keyHandler(e) {
+        const { add, search, description, todoClear } = this.props;
         if (e.key === 'Enter') {
-            e.shiftKey ? props.handleSearch() : props.handleAdd();
+            e.shiftKey ? search(description) : add(description); // Pesquisa com filtro de descrição
         } else if (e.key === 'Escape') {
-            props.handleClear();
+            todoClear();
         }
     }
 
-    return (
-        <form className="todoForm row p-3">
-            <Grid cols="12 9 10  ">
-                <input type="text" id="description" className="form-control" placeholder="Adicionar Tarefa" value={props.description} onChange={props.handleChange} 
-                onKeyUp={keyHandler} />
-            </Grid>
+    render() {
+        const { description, changeDescription, add, search, todoClear } = this.props;
 
-            <Grid cols="12 3 2">
-                <IconButton style="primary" icon={<FaPlus />} onClick={props.handleAdd} />
-                <IconButton style="info" icon={<FaSearch />} onClick={props.handleSearch} />
-                <IconButton style="default border   " icon={<IoMdClose />} onClick={props.handleClear} />
-            </Grid>
+        return (
+            <form className="todoForm row p-3">
+                <Grid cols="12 9 10">
+                    <input
+                        type="text"
+                        id="description"
+                        className="form-control"
+                        placeholder="Adicionar Tarefa"
+                        value={description}
+                        onChange={changeDescription}
+                        onKeyUp={this.keyHandler}
+                    />
+                </Grid>
 
-        </form >
-    );
+                <Grid cols="12 3 2">
+                    <IconButton style="primary" icon={<FaPlus />} onClick={() => add(description)} />
+                    <IconButton style="info" icon={<FaSearch />} onClick={() => search(description)} /> {/* Pesquisa com filtro de descrição */}
+                    <IconButton style="default border" icon={<IoMdClose />} onClick={() => todoClear()} />
+                </Grid>
+            </form>
+        );
+    }
 }
+
+const mapStateToProps = state => ({ description: state.todo.description });
+const mapDispatchToProps = dispatch => bindActionCreators({ changeDescription, search, add, todoClear }, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(TodoForm);

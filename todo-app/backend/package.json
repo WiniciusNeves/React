@@ -17,6 +17,7 @@
     "pm2": "4.5.5"
   },
   "devDependencies": {
-    "nodemon": "2.0.7"
+    "nodemon": "2.0.7",
+    "redux-promise": "^0.6.0"
   }
 }

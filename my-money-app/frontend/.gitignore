@@ -1,0 +1,10 @@
+node_modules
+.vscode
+.vscodeignore
+README.md
+package.json
+package-lock.json
+tsconfig.json
+webpack.config.js
+.env
+*.log

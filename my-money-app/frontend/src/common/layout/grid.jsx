@@ -12,6 +12,9 @@ export default class Grid extends Component {
         if (cols[3]) classes += ` col-lg-${cols[3]}`;
         if (cols[2]) classes += ` col-md-${cols[2]}`;
 
+
+        return classes;
+        
     }
     render() {
 

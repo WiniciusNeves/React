@@ -4,7 +4,7 @@ import { reset as resetForm, initialize } from 'redux-form';
 import { showTab, selectTab } from '../common/tab/tabAction';
 
 const BASE_URL = 'http://localhost:3000/api';
-const INITIAL_STATE = {}
+const INITIAL_STATE = { credits: [{}], debts: [{}] }
 export function getList() {
     const request = axios.get(`${BASE_URL}/billingCycles`);
 

@@ -3,6 +3,5 @@ node_modules
 .vscodeignore
 README.md
 tsconfig.json
-webpack.config.js
 .env
 *.log

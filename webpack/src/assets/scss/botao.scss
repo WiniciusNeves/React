@@ -1,0 +1,9 @@
+$cor-botao-padrao: #2196F3;
+
+.botao {
+    background-color: $cor-botao-padrao;
+    font-size: 1.2rem;
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    border: 2px solid $cor-botao-padrao;
+}

@@ -1,0 +1,18 @@
+header.header{
+   background-color: aliceblue;
+   padding: 0 15px;
+   overflow: hidden;
+   white-space: nowrap;
+   box-shadow: var(--shadow);
+}
+
+header.header .header-title{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--bg-dark);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 15px;
+   
+
+}
